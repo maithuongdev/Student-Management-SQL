@@ -24,12 +24,9 @@ pip install -r requirements.txt
 * Open the Python files (e.g., `src/UI.py`) and update the `SERVER=...` connection string in the `connect_db()` function to match your local or remote SQL Server instance name.
 
 ## Usage
-1. Run the initialization script (e.g., `src/InitEmployee.py` or `src/AddNV.py`) to insert the first employee into the database and generate the `*.pem` key files.
+1. Run the initialization script (`src/InitEmployee.py`) to insert the first employee into the database and generate the `*.pem` key files.
 2. Launch the main application:
 \`\`\`bash
 python src/UI.py
 \`\`\`
 3. Log in using the credentials you just created and start managing your classes and students.
-
-## ⚠️ Security Note
-**Never** commit your key files (`private.pem`, `public.pem`, or `rsa_keys.json`) to public version control repositories like GitHub. Your system's entire security layer will be compromised if the Private Key is exposed. Ensure these files are added to your `.gitignore`.
